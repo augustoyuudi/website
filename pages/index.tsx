@@ -46,6 +46,17 @@ const Home: NextPage = () => {
         <section className={styles.main__projects}>
           <h2 className={styles['section-title']}>PROJECTS</h2>
           <div className={styles.cards}>
+          <article className={styles.card}>
+              <a
+                href="https://github.com/augustoyuudi/potaku"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p className={styles.card__subtitle}>Vue.js</p>
+                <h3 className={styles.card__title}>potaku</h3>
+                <p className={styles.card__description}>Entertainment for otakus. Play games with your favorite animes and mangas.</p>
+              </a>
+            </article>
             <article className={styles.card}>
               <a
                 href="https://github.com/augustoyuudi/weather-app-ts"
@@ -76,7 +87,7 @@ const Home: NextPage = () => {
               >
                 <p className={styles.card__subtitle}>Next.js</p>
                 <h3 className={styles.card__title}>on-food</h3>
-                <p className={styles.card__description}>Next.js SSR website to find food recommendations</p>
+                <p className={styles.card__description}>Next.js SSR website to find food recommendations.</p>
               </a>
             </article>
             <article className={styles.card}>
@@ -87,7 +98,7 @@ const Home: NextPage = () => {
               >
                 <p className={styles.card__subtitle}>React.js</p>
                 <h3 className={styles.card__title}>green-friend</h3>
-                <p className={styles.card__description}>React.js app to get plants recommendations</p>
+                <p className={styles.card__description}>React.js app to get plants recommendations.</p>
               </a>
             </article>
             <article className={styles.card}>
