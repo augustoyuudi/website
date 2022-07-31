@@ -45,74 +45,86 @@ const Home: NextPage = () => {
         </header>
         <section className={styles.main__projects}>
           <h2 className={styles['section-title']}>PROJECTS</h2>
-          <div className={styles.cards}>
-          <article className={styles.card}>
-              <a
-                href="https://github.com/augustoyuudi/potaku"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p className={styles.card__subtitle}>Vue.js</p>
-                <h3 className={styles.card__title}>potaku</h3>
-                <p className={styles.card__description}>Entertainment for otakus. Play games with your favorite animes and mangas.</p>
-              </a>
-            </article>
-            <article className={styles.card}>
-              <a
-                href="https://github.com/augustoyuudi/weather-app-ts"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p className={styles.card__subtitle}>Typescript</p>
-                <h3 className={styles.card__title}>weather-app</h3>
-                <p className={styles.card__description}>Node.js API to check best weather conditions for surfing.</p>
-              </a>
-            </article>
-            <article className={styles.card}>
-              <a
-                href="https://github.com/augustoyuudi/pokemon-games"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p className={styles.card__subtitle}>Vue.js</p>
-                <h3 className={styles.card__title}>pokemon-games</h3>
-                <p className={styles.card__description}>Vue.js SPA detaiarticleng pokémon games.</p>
-              </a>
-            </article>
-            <article className={styles.card}>
-              <a
-                href="https://github.com/augustoyuudi/on-food"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p className={styles.card__subtitle}>Next.js</p>
-                <h3 className={styles.card__title}>on-food</h3>
-                <p className={styles.card__description}>Next.js SSR website to find food recommendations.</p>
-              </a>
-            </article>
-            <article className={styles.card}>
-              <a
-                href="https://github.com/augustoyuudi/green-friend"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p className={styles.card__subtitle}>React.js</p>
-                <h3 className={styles.card__title}>green-friend</h3>
-                <p className={styles.card__description}>React.js app to get plants recommendations.</p>
-              </a>
-            </article>
-            <article className={styles.card}>
-              <a
-                href="https://github.com/augustoyuudi/starwars-pwa"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p className={styles.card__subtitle}>Vue.js</p>
-                <h3 className={styles.card__title}>starwars-pwa</h3>
-                <p className={styles.card__description}>Vue.js PWA consuming Star Wars API.</p>
-              </a>
-            </article>
-          </div>
+          <ul className={styles.cards}>
+            <li>
+              <article className={styles.card}>
+                <a
+                  href="https://github.com/augustoyuudi/potaku"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className={styles.card__subtitle}>Vue.js</p>
+                  <h3 className={styles.card__title}>potaku</h3>
+                  <p className={styles.card__description}>Entertainment for otakus. Play games with your favorite animes and mangas.</p>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article className={styles.card}>
+                <a
+                  href="https://github.com/augustoyuudi/weather-app-ts"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className={styles.card__subtitle}>Typescript</p>
+                  <h3 className={styles.card__title}>weather-app</h3>
+                  <p className={styles.card__description}>Node.js API to check best weather conditions for surfing.</p>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article className={styles.card}>
+                <a
+                  href="https://github.com/augustoyuudi/pokemon-games"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className={styles.card__subtitle}>Vue.js</p>
+                  <h3 className={styles.card__title}>pokemon-games</h3>
+                  <p className={styles.card__description}>Vue.js SPA detaiarticleng pokémon games.</p>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article className={styles.card}>
+                <a
+                  href="https://github.com/augustoyuudi/on-food"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className={styles.card__subtitle}>Next.js</p>
+                  <h3 className={styles.card__title}>on-food</h3>
+                  <p className={styles.card__description}>Next.js SSR website to find food recommendations.</p>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article className={styles.card}>
+                <a
+                  href="https://github.com/augustoyuudi/green-friend"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className={styles.card__subtitle}>React.js</p>
+                  <h3 className={styles.card__title}>green-friend</h3>
+                  <p className={styles.card__description}>React.js app to get plants recommendations.</p>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article className={styles.card}>
+                <a
+                  href="https://github.com/augustoyuudi/starwars-pwa"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className={styles.card__subtitle}>Vue.js</p>
+                  <h3 className={styles.card__title}>starwars-pwa</h3>
+                  <p className={styles.card__description}>Vue.js PWA consuming Star Wars API.</p>
+                </a>
+              </article>
+            </li>
+          </ul>
         </section>
       </main>
     </div>
