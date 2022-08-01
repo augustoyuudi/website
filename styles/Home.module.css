@@ -117,39 +117,12 @@
   transition: opacity .2s ease-in-out;
 }
 
-.cards .card {
-  padding: 2.5rem;
-  background-color: rgb(32 32 34/1);
-  transition: all .2s ease-in-out;
-}
-
-.card__title {
-  line-height: 1.25;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: .5rem;
-}
-
-.card__subtitle {
-  letter-spacing: 3px;
-  font-size: .625rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: .5rem;
-}
-
-.card__description {
-  color: rgb(148 148 149/1);
-  font-size: .875rem;
-  line-height: 1.3rem;
-}
-
 @media screen and (min-width: 992px) {
-  .cards:hover .card {
+  .cards:hover article {
     opacity: .5;
   }
 
-  .cards .card:hover {
+  .cards article:hover {
     opacity: 1;
     transform: scale(1.1);
   }

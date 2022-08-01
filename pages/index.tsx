@@ -1,13 +1,39 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { getDatabase, ref, child, get } from 'firebase/database'
+import ProjectCard from '../components/ProjectCard'
+import type { Project } from '../types'
 import styles from '../styles/Home.module.css'
 import githubIcon from '../assets/github.svg';
 import linkedinIcon from '../assets/linkedin.svg';
 import link from '../assets/link.svg';
 import profile from '../assets/profile.jpeg';
 
-const Home: NextPage = () => {
+interface HomeProps {
+  projects: Project[]
+}
+
+export async function getServerSideProps() {
+  try {
+    const db = ref(getDatabase())
+    const snapshot = await get(child(db, 'projects'))
+    let projects = []
+
+    if (snapshot.exists()) {
+      projects = snapshot.val()
+    }
+
+    return {
+      props: {
+        projects
+      }
+    }
+  } catch(error) {
+    console.error(error);
+  }
+}
+
+const Home = (props: HomeProps) => {
   return (
     <div className={styles.home}>
       <Head>
@@ -46,84 +72,20 @@ const Home: NextPage = () => {
         <section className={styles.main__projects}>
           <h2 className={styles['section-title']}>PROJECTS</h2>
           <ul className={styles.cards}>
-            <li>
-              <article className={styles.card}>
-                <a
-                  href="https://github.com/augustoyuudi/potaku"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p className={styles.card__subtitle}>Vue.js</p>
-                  <h3 className={styles.card__title}>potaku</h3>
-                  <p className={styles.card__description}>Entertainment for otakus. Play games with your favorite animes and mangas.</p>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article className={styles.card}>
-                <a
-                  href="https://github.com/augustoyuudi/weather-app-ts"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p className={styles.card__subtitle}>Typescript</p>
-                  <h3 className={styles.card__title}>weather-app</h3>
-                  <p className={styles.card__description}>Node.js API to check best weather conditions for surfing.</p>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article className={styles.card}>
-                <a
-                  href="https://github.com/augustoyuudi/pokemon-games"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p className={styles.card__subtitle}>Vue.js</p>
-                  <h3 className={styles.card__title}>pokemon-games</h3>
-                  <p className={styles.card__description}>Vue.js SPA detaiarticleng pokémon games.</p>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article className={styles.card}>
-                <a
-                  href="https://github.com/augustoyuudi/on-food"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p className={styles.card__subtitle}>Next.js</p>
-                  <h3 className={styles.card__title}>on-food</h3>
-                  <p className={styles.card__description}>Next.js SSR website to find food recommendations.</p>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article className={styles.card}>
-                <a
-                  href="https://github.com/augustoyuudi/green-friend"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p className={styles.card__subtitle}>React.js</p>
-                  <h3 className={styles.card__title}>green-friend</h3>
-                  <p className={styles.card__description}>React.js app to get plants recommendations.</p>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article className={styles.card}>
-                <a
-                  href="https://github.com/augustoyuudi/starwars-pwa"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p className={styles.card__subtitle}>Vue.js</p>
-                  <h3 className={styles.card__title}>starwars-pwa</h3>
-                  <p className={styles.card__description}>Vue.js PWA consuming Star Wars API.</p>
-                </a>
-              </article>
-            </li>
+            {
+              props.projects.map((project) => {
+                return (
+                  <li key={project.link}>
+                    <ProjectCard
+                      name={project.name}
+                      description={project.description}
+                      technology={project.technology}
+                      link={project.link}
+                    />
+                  </li>
+                )
+              })
+            }
           </ul>
         </section>
       </main>
