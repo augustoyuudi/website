@@ -23,7 +23,8 @@ SSR website using [Astro](https://astro.build/).
 ## Acknowledgement
 
 [![Stack](https://skillicons.dev/icons?i=astro)](https://astro.build/)
-[![Stack](https://skillicons.dev/icons?i=netlify)](https://www.netlify.com/)
+[![Stack](https://skillicons.dev/icons?i=netlify)](https://www.netlify.com/)\
+[Animechan](https://animechan.vercel.app/) - A free restful API serving quality anime quotes
 
 
 ## Tasks
