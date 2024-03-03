@@ -15,7 +15,7 @@ export default function Home() {
         </p>
 
         <p className='text-xl font-light mb-4'>
-          In my spare time, I'm immersed in the development of <a className="underlined-link" href="https://github.com/augustoyuudi/potaku" target="_blank">Potaku</a>, a vibrant website designed exclusively for anime enthusiasts.
+          In my spare time, I am immersed in the development of <a className="underlined-link" href="https://github.com/augustoyuudi/potaku" target="_blank">Potaku</a>, a vibrant website designed exclusively for anime enthusiasts.
         </p>
 
         <p className='text-xl font-light mb-4'>
