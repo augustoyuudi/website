@@ -15,7 +15,7 @@ export default function Home() {
         </p>
 
         <p className='text-xl font-light mb-4'>
-          In my spare time, I am immersed in the development of <a className="underlined-link" href="https://github.com/augustoyuudi/potaku" target="_blank">Potaku</a>, a vibrant website designed exclusively for anime enthusiasts.
+          In my spare time, I am immersed in the development of <a className="underlined-link" href="https://whizr.app" target="_blank">Whizr</a>, the perfect website to find nearby events.
         </p>
 
         <p className='text-xl font-light mb-4'>
@@ -23,7 +23,7 @@ export default function Home() {
         </p>
 
         <p className='text-xl font-light'>
-          Outside of programming I enjoy traveling ✈️, discovering new culinary experiences 🍜, swimming 🏊, and immersing myself in the captivating worlds of animes 👾 and video games 🎮.
+          Outside of programming I enjoy traveling ✈️ and discovering new culinary experiences 🍜.
         </p>
       </div>
     </main>
